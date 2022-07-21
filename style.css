@@ -40,7 +40,7 @@ body {
     min-height: 275px;
     max-width: 480px;
 
-    position: fixed;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -87,6 +87,10 @@ body {
     box-shadow: 0px 0px 40px 5px #00ffb8;
 }
 
+.rotate {
+    transition: 1.2s ease-out;
+    transform: rotate(360deg);
+}
 
 .snippet {
     position: relative;

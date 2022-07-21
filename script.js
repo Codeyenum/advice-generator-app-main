@@ -14,6 +14,7 @@ let showAnim = () => {
 }
 
 adviceBtn.addEventListener("click", () => {
+    adviceBtn.children[0].classList.add("rotate");
     adviceQuote.innerText = "";
     showAnim();
     
@@ -25,6 +26,7 @@ adviceBtn.addEventListener("click", () => {
         hideAnim();        
         adviceID.innerText = adviceSlip.id;
         adviceQuote.innerText = `"${adviceSlip.advice}"`;
+        adviceBtn.children[0].classList.remove("rotate");
     }
     setTimeout(getAdvice, 1200);
     
