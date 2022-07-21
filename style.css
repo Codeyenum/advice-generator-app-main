@@ -159,3 +159,19 @@ body {
 .snippet.show {
     display: inline-block;
 }
+
+.attribution {    
+    color: var(--lightCyan);
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {    
+    border: none;
+    color: var(--neonGreen);
+    text-decoration: none;
+}
+
+.attribution a:hover{
+    color: #ff0047;
+}
