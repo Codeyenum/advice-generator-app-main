@@ -24,7 +24,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Frontend Mentor - Advice generator app solution](https://www.frontendmentor.io/solutions/ecommerce-product-page-jB8Qj17sGQ)
+- Solution URL: [Frontend Mentor - Advice generator app solution](https://www.frontendmentor.io/solutions/advice-generator-app--EJzvmeJox)
 - Live Site URL: [Advice generator app](https://codeyenum.github.io/advice-generator-app-main/)
 
 ## My process
