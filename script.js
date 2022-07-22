@@ -30,7 +30,8 @@ adviceBtn.addEventListener("click", () => {
             adviceBtn.children[0].classList.remove("rotate");
         } catch (e) {
             hideAnim();
-            adviceQuote.innerText = e;            
+            adviceQuote.innerText = e.message + " advice. Please try again.";              
+            adviceQuote.style.color = "#e82f17";
         };
     }
     setTimeout(getAdvice, 1200)
