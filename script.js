@@ -17,18 +17,23 @@ adviceBtn.addEventListener("click", () => {
     adviceBtn.children[0].classList.add("rotate");
     adviceQuote.innerText = "";
     showAnim();
-    
-    let getAdvice = async () => {        
-        let resp = await fetch("https://api.adviceslip.com/advice");           
-        let dataObject = await resp.json();
-        let adviceSlip = dataObject.slip;
 
-        hideAnim();        
-        adviceID.innerText = adviceSlip.id;
-        adviceQuote.innerText = `"${adviceSlip.advice}"`;
-        adviceBtn.children[0].classList.remove("rotate");
+    let getAdvice = async () => {
+        try {
+            let resp = await fetch("https://api.adviceslip.com/advice");
+            let dataObject = await resp.json();
+            let adviceSlip = dataObject.slip;
+
+            hideAnim();
+            adviceID.innerText = adviceSlip.id;
+            adviceQuote.innerText = `"${adviceSlip.advice}"`;
+            adviceBtn.children[0].classList.remove("rotate");
+        } catch (e) {
+            hideAnim();
+            adviceQuote.innerText = e;            
+        };
     }
-    setTimeout(getAdvice, 1200);
-    
-    
+    setTimeout(getAdvice, 1200)
+
+
 })
