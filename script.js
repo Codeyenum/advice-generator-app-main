@@ -20,6 +20,7 @@ adviceBtn.addEventListener("click", () => {
 
     let getAdvice = async () => {
         try {
+            adviceQuote.style.color = "";
             let resp = await fetch("https://api.adviceslip.com/advice");
             let dataObject = await resp.json();
             let adviceSlip = dataObject.slip;
@@ -30,6 +31,7 @@ adviceBtn.addEventListener("click", () => {
             adviceBtn.children[0].classList.remove("rotate");
         } catch (e) {
             hideAnim();
+            adviceID.innerText = "???";
             adviceQuote.innerText = e.message + " advice. Please try again.";              
             adviceQuote.style.color = "#e82f17";
         };
